@@ -10,9 +10,9 @@ import {FFmpegOpts, mp4ToGif} from './ffmpeg.js';
 export type VideoFileContext = FileFlavor<Context>;
 
 // send file with specified path to the user
-const sendVideoToUser = async (ctx: Context, pathToGif: string) => {
+const sendVideoToUser = async (ctx: Context, pathToFile: string) => {
     try {
-        const video = new InputFile(pathToGif);
+        const video = new InputFile(pathToFile);
         await ctx.replyWithVideo(video);
     } catch (error) {
         console.error('Error sending file:', error);
