@@ -37,7 +37,7 @@ export const convertVideoToGif = (ffmpegInst: FFmpeg) => {
         //      - start time should match a special regex ...
         const startTime = commandArguments[1];
         const duration = commandArguments[2];
-        console.log(`[command "toGif"] got start-time:${startTime}; duration:${duration}`);
+        console.log(`[command "toGif"] got start-time: ${startTime}; duration: ${duration}`);
 
         // get default directory for videos
         const {dataDirPath} = getConfig();
